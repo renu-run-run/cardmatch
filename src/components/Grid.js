@@ -6,6 +6,8 @@ import { pair_emojis, initRevealState } from "../Constants";
 import Confetti from "react-confetti";
 import win from '../Assets/win.png'
 import winmizo from '../Assets/winmizo.png'
+import backarrow from '../Assets/backarrow.png'
+import { Link } from "react-router-dom";
 
 const Grid = () => {
     const [flipped, setFlipped] = useState(initRevealState);
@@ -99,11 +101,16 @@ const Grid = () => {
                     )
                 })}
             </div>
-            {winning &&
+            {winning &&<>
                 <div className="win-image-container-centered">
-                    <img src={win} alt="monkey" className="win-image" />
-                    <img src={winmizo} alt="winmizo" className="winmizo-image" />
-                </div>
+                <img src={win} alt="monkey" className="win-image" />
+                <img src={winmizo} alt="winmizo" className="winmizo-image" />
+                <Link to="/" style={{  cursor: "pointer", marginTop: "20px" , marginRight:"20px" }}>
+                <img src={backarrow} alt="monkey" style={{ width: "20%", height: "20%" }} /></Link>
+            </div>
+          
+                </>
+               
             }
         </div>
     )

@@ -1,4 +1,4 @@
-const emojis = ['👽','🤖','❤️','🐸','🤡','🐦','🌚','😈'];
+const emojis = ['🍎','🍌','🍇','🍉','🍍','🥭','🍑','🍏'];
 // const emojis = [
 //     {'🍎' : "Apple"},{'🍌': "Banana"},{'🍇': "graps"},{'🍉':"melon"},{'🍍': "pineapple"},{'🥭':"mango"}];
 const pair_emojis  = [...emojis, ...emojis];

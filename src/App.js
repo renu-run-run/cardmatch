@@ -1,6 +1,6 @@
 
 import './App.css';
-import Header from './components/Header';
+
 import Grid from './components/Grid';
 import { Routes, Route } from 'react-router-dom';
 import Start from './components/Start';
