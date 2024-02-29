@@ -1,38 +1,96 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body{
+  font-family: 'Baloo Bhai 2' , cursive;
+  background-color: var(--green);
+}
+:root {
+  --green:#cbe7fd ;
+  /* --green:#000000 ; */
+  --purple: #510069;
+  --pink:#00282b;
+  --yellow: #EDE7B1;
+  --blue:  #f1ff52;
+}
+
+.App{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cards-container {
+ 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 50rem;
+  margin: auto;
+  grid-gap: 0.5rem;
+  padding: 0.2rem;
+ 
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.main-container {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+  
+  .card{
+    /* border: 5px solid var(--blue); */
+    border-radius: 5px;
+    background-color: var(--blue);
+    transition: all .5s;
+    cursor: pointer;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .card:hover{
+    border-color: var(--pink);
   }
-  to {
-    transform: rotate(360deg);
+  .content{
+    visibility: hidden;
   }
+
+  .flipped{
+    background-color: transparent;
+    
+  }
+  .flipped > .content{
+    visibility: visible;
+  }
+
+  .main-title{
+    color: var(--purple);
+  }
+
+  .card.flipped{
+    transform: rotateY(180deg)
+  }
+  .scorecard{
+    color: var(--pink);
+  }
+  .win-image-container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.win-image {
+    width: 50%;
+    height: 50%;
+}
+.win-image-container-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Ensure it's above other elements */
+}
+
+
+.winmizo-image {
+  position: absolute;
+  width: 30%;
+  height: 40%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
